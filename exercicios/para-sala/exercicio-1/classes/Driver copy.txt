@@ -1,0 +1,29 @@
+export class Driver {
+name;
+age;
+numberOfRides = 0;//não vai receber no construtor então pode inicializar com zero
+//pois?? ver gravação aos 6 min.
+amountEarned = 0;
+
+constructor(name, age){
+    this.name = name;
+    this.age = age;
+    // this.numberOfRides = numberOfRides;
+    // ou dessa forma: this.numberOfRides = 0;
+    // this.amountEarned = amountEarned;
+    if(age >=18){
+        this.name = name;
+        this.age = age;
+
+    }else {
+        throw "você precisa ter 18 anos ou mais para ser motorista"
+    }
+}
+
+runDrive(amount){
+    this.numberOfRides++;
+    this.amountEarned += amount
+
+}
+
+} 

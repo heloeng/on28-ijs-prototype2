@@ -11,6 +11,7 @@ const passageira1 = new Passenger('Luara', 27, 111);
 const passageira2 = new Passenger('Erica', 15, 222);
 const passageira3 = new Passenger('Claudia', 25, 333);
 
+
 console.log(Driver.drivers);
 console.log(Passenger.passengers);
 

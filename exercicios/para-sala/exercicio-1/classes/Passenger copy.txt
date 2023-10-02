@@ -1,0 +1,41 @@
+import { Driver } from './Driver.js'
+
+export class Passenger {
+    name;
+    age;
+    password;
+    amountSpent = 0;
+
+    constructor(name, age, password) {
+        this.name = name;
+        this.age = age;
+        this.password = password
+    }
+
+    requestDrive(driver, amount, password) {
+        // A corrida só pode ser solicitada se a
+        // senha (`password`) estiver correta.
+        if (password !== this.password) {
+            console.log('Senha inválida');
+            return;//não precisa do else por causa do return
+        }
+
+        // O parâmetro `driver` precisa, 
+        //obrigatoriamente, ser do tipo `Driver`,
+        // caso contrário, a requisição não pode 
+        //ser realizada.
+        if (!(driver instanceof Driver)) {
+            console.log('O parâmetro Motorista é inválido')
+            return;
+        }
+
+        //- O `amount` do passageiro **diminui** a cada corrida, 
+        //de acordo com o parâmetro `amount` da 
+        //função (esse valor será sempre **negativo**).
+        this.amountSpent -= amount;
+        driver.runDrive(amount)
+
+
+
+    }
+}

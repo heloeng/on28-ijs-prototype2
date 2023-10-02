@@ -56,7 +56,7 @@ console.log(person1); // { name: 'Maria' }
 ```
 
 ### 3 - Client
-Defina ainda uma classe `Client`, herdando de `Person`.
+Defina ainda uma classe `Client`,
 A classe deve possuir as seguintes propriedades:
 
 - [ ] `banks`: Uma array de bancos ao qual é associada 
