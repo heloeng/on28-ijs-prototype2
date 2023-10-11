@@ -17,6 +17,7 @@ export class Driver {
     this.constructor.drivers.push({ name: name, age: age });
 	}
 
+	//valor ganho
 	get amountEarned() {
 		return this.#amountEarned;
 	}

@@ -26,6 +26,8 @@ export class Driver {
 
 	static numberOfDrivers() {
 		console.log(`A quantidade de motoristas cadastradas é ${Driver.drivers.length}.`)
+		//ou  this.drivers.length sem  o 'constructor'
+		// console.log(`A quantidade de motoristas cadastradas é ${this.drivers.length}.`)
 	}
 
 	static ageAverage() {

@@ -2,8 +2,8 @@ import { Driver } from "./Driver.js";
 
 export class Passenger {
 	name; // opcional
-	age; // obrigatorio
-	#password;
+	age; // opcional
+	#password;// obrigatorio , pois é privado
 	#amountSpent = 0;
 
   static passengers = [];
@@ -23,6 +23,8 @@ export class Passenger {
 		this.#amountSpent = newAmountSpent;
 	}
 
+	//alterar a senha, não foi usada o metodo SET, porque O MÉTODO SET precisa
+	//receber dois parâmetros e set só pode receber um parâmeto
 	changePassword(oldPassword, newPassword) {
 		if(oldPassword === this.#password) {
 			this.#password = newPassword;
