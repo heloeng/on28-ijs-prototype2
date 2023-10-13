@@ -13,9 +13,11 @@ class Person {
   }
   
   class User extends Person {
-    email;
-    password;
-  
+   //se passar esses parâmetros email e password terei que passa-lo tambem na chamada do super la em baixo
+    // email;
+    // password;
+  // exemplo:   super(name, age, email, password);
+      
     constructor(name, age, email, password) {
       //ao inves de fazer assim:
       //  this.name = name;
@@ -38,12 +40,22 @@ class User extends Person {
 }
 
 */
-      super(name);
+      super(name, age); //? se esquecer algum parâmetro no super ele vai exisistir, mas
+      //? esse parâmetro esquecido vira como "undefined"
       
       //parâmetros exclusivos da classe User
       this.email = email;
       this.password = password;
     }
+
+
+    //!SOBRESCREVE O MÉTODO
+    speak() {
+      console.log(`A usuária de nome ${this.name} está falando`);
+    }
+    
+    
+
   }
   
   //CRIAR USUÁRIO
@@ -53,18 +65,19 @@ class User extends Person {
 
 
 
-  //SE DENTRO DO CONSTRUTOR EU PASSAR  FALTANDO UM PARÂMETRO
-  //super(name);
-  //IDADE RETORNARA UNDEFINED
-  /* 
-  User {
-  name: 'Luara',
-  age: undefined,
-  email: 'luara@email.com',
-  password: 123
-}
-A pessoa de nome Luara está falando
+  // ! SE DENTRO DO CONSTRUTOR EU PASSAR  FALTANDO UM PARÂMETRO
+  // ! super(name);
+ // ! IDADE RETORNARA UNDEFINED
+  // !  
+  // ! User {
+ // !  name: 'Luara',
+  // ! age: undefined,
+ // !  email: 'luara@email.com',
+ // !  password: 123
+// ! }
+// ! A pessoa de nome Luara está falando
+
+
   
-  
-  */
+
 

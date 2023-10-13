@@ -1,13 +1,17 @@
 import { Driver } from "./Driver.js";
 import { Person } from "./Person.js";
+
+
 export class Passenger extends Person {
 	#password;
 
   static passengers = [];
 
 	constructor(name, age, password) {
+		//VAI ENTRAR NA CLASSE PERSON E EXECUTAR O CONSTRUTOR 
 		super(name, age);
-		this.#password = password;
+	
+	this.#password = password;
     this.constructor.passengers.push({ name: name, age: age });
 	}
 
